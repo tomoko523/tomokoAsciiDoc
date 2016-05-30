@@ -1,0 +1,77 @@
+= Tomoko Doc Sample
+
+Doc Writer <tomoko.t.523@outlook.jp> +
+This is written by http://asciidoc.org[AsciiDoc].
+
+== はじめに ==
+
+これは私が社内で、新人にWebアプリケーション開発について説明するための資料を作った際のドキュメントを再整形したものです。
+webアプリケーションを開発するうえで知っておいたほうがいいことをざっくり（重要）説明しています。
+
+
+[red]#*※内容は予告なく編集されます。*#
+
+== WebとHTML/CSS/Javascriptの関係 ==
+
+
+=== Webとは
+
+[quote, 'http://e-words.jp/w/Web.html[IT用語辞典e-Words:Web]']
+____
+Webとは、インターネット上で標準的に用いられている、文書の公開・閲覧システム。
+(中略)
+“web”とは蜘蛛の巣の意味であり、大規模なハイパーテキストの文書間の繋がりを図示すると
+複雑な蜘蛛の巣のように見えることからこのように呼ばれる。
+____
+
+=== HTML/CSS ===
+
+webで情報を公開しているものをWebサーバ、その情報を受信して表示するものをWebクライアントといいます。 +
+Webクライアントの代表的なものとしてWebブラウザ（ブラウザ）があります。 +
+そして、受信した情報を整形し表示する技術として、HTML/CSSがあります。
+
+HTML 【 HyperText Markup Language 】:: 文章をマーク（※タグ<>のこと）アップすることで書体や修飾を付与する言語のこと。
+
+[source,html]
+.sample.html
+----
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>HTML Sample</title>
+ </head>
+ <body>
+  <p>Hello World!</p>
+ </body>
+</html>
+----
+
+
+CSS　【Cascading Style Sheet】:: HTMLで表現されていた文章の見栄えを制御する部分を、さらに専用の言語として分けた言語。 +
+HTML5以後はHTML/CSSの切り分けが顕著になっています.
+
+[source,css]
+.sample.css
+----
+.hoge{
+  background-color:red;
+}
+----
+
+
+
+=== Javascript ===
+
+webブラウザは情報を表示するものですが、閲覧者の入力を受けてwebサーバに情報を送信したり動的に表示を変更したりできるページやサイトのことを特にwebアプリケーションといいます。 +
+そして、クライアントの入力を受け付けたり情報を動的に制御する技術としてJavascriptがあります。
+
+Javascript::
+webブラウザ上で動作する簡易のスクリプト言語。 +
+Javaとは関係はない（考案された当時、流行っていた言語がJavaだったので、それにのっかったらしい）。
+
+[source,javascript]
+.sample.js
+----
+document.write("Hello World!!");
+----
